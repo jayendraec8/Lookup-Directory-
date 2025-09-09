@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.login-page, .main-page {
+  display: none;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.login-page.active, .main-page.active {
+  display: flex;
+}
+
+.login-page {
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page h2 {
+  margin-bottom: 15px;
+}
+
+.login-page input {
+  padding: 8px;
+  width: 220px;
+  margin: 5px 0;
+  border: 1px solid #007BFF;
+}
+
+.top-bar {
+  width: 100%;
+  background: #007BFF;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.lookup {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.menu-button {
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.logout-button {
+  cursor: pointer;
+  border: none;
+  background: white;
+  color: #007BFF;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 120px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.dropdown div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown div:hover {
+  background-color: #e6f0ff;
+}
+
+.state-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+select, input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #007BFF;
+  color: black;
+  background-color: white;
+}
+
+.search-button {
+  padding: 8px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+#results {
+  overflow-x: auto;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  min-width: 600px;
+}
+
+th, td {
+  border: 1px solid #007BFF;
+  padding: 6px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #007BFF;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
