@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lookup Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div class="login-page active" id="loginPage">
+    <div>
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username"><br><br>
+      <input type="password" id="password" placeholder="Password"><br><br>
+      <button class="search-button" onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- Main Page -->
+  <div class="main-page" id="mainPage">
+    <div class="top-bar">
+      <div class="lookup">
+        LOOKUP
+        <button class="menu-button" onclick="toggleDropdown()">☰</button>
+      </div>
+      <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="dropdown" id="dropdownMenu">
+      <div onclick="selectState('Andhra Pradesh')">Andhra Pradesh</div>
+      <div onclick="selectState('Tamil Nadu')">Tamil Nadu</div>
+      <div onclick="selectState('Karnataka')">Karnataka</div>
+      <div onclick="selectState('Kerala')">Kerala</div>
+      <div onclick="selectState('Maharashtra')">Maharashtra</div>
+      <div onclick="selectState('Telangana')">Telangana</div>
+    </div>
+
+    <div class="state-title" id="stateTitle">ANDHRA PRADESH</div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select id="filterSelect" onchange="updatePlaceholder()">
+        <option value="POLICY_HOLDER_MOBILE">Mobile Number</option>
+        <option value="POLICY_HOLDER_NAME">Policy Holder Name</option>
+        <option value="Nominee_Name">Nominee Name</option>
+        <option value="Nominee_Relation">Nominee Relation</option>
+      </select>
+      <input type="text" id="filterInput" placeholder="Enter here">
+      <button class="search-button" onclick="searchCSV()">Search</button>
+    </div>
+
+    <!-- Results -->
+    <div id="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
